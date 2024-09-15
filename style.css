@@ -1,0 +1,169 @@
+@font-face {
+    font-family: mochiyPopOneRegular;
+    src: url(font/MochiyPopOne-Regular.ttf);
+}
+
+body{
+    background:
+    radial-gradient(white 5%, transparent 16%) 0 0,
+    radial-gradient(white 5%, transparent 16%) 3px 3px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 12px;
+    background-color:#B7B7B7;
+    background-size:6px 6px;
+    overflow: hidden; 
+
+}
+
+.moon{
+    background-color: #EFEBB8;
+    position:relative;
+    left: 40%;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    box-shadow: 5px 0 10px 3px rgba(239, 235, 184,0.3),
+                0 0 10px 2px rgba(239, 235, 184,0.3),
+                5px 0 10px 3px rgba(239, 235, 184,0.3),
+                0px 0 3px 2px rgba(239, 235, 184,0.3);
+    top: 1vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;  
+}
+
+#boing1, #boing2, #boing3, #boing4 {
+    font-size: 30vh;
+    font-family: mochiyPopOneRegular;
+    width: 30%;
+    height: auto; 
+    position: absolute;
+    display: inline-block;
+    overflow: visible; 
+    padding: 10px; 
+    white-space: nowrap;
+    animation-name: fadeInOut;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-play-state: paused;
+    z-index: 20;
+}
+#boing1{
+    top: 17%; 
+    left: 7%;
+    transform: rotate(15deg);
+    animation-delay: 2.4s;
+}
+#boing2{
+    top: 25%; 
+    left: 55%;
+    transform: rotate(-25deg);
+    animation-delay: 3.4s;
+}
+#boing3{
+    top: 2%; 
+    left: 5%;
+    font-size: 40vh;
+    transform: rotate(40deg);
+    animation-delay: 5.9s;
+}
+#boing4{
+    top: 35%; 
+    left: 50%;
+    font-size: 40vh;
+    transform: rotate(-55deg);
+    animation-delay: 6.9s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#cloud1, #cloud2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+#cloud1 img, #cloud2 img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: cloudanim 10s linear infinite;
+    transition-timing-function: ease-out;
+    opacity: 0;
+    width: 15vw;
+    height: auto;
+    top: 35%;
+}
+#cloud1 img {
+    left: 9%;
+}
+#cloud2 img {
+    right: 9%;
+}
+@keyframes cloudanim {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    25%, 75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(3);
+    }
+}
+
+#sunGod{
+    max-width: 50%;
+    max-height: 30vh;
+    position: relative;
+    animation-duration: 2.5s;
+    animation-name: sunGod;
+    animation-delay: 8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+@keyframes sunGod {
+    0%   {left:500%; top:140%;opacity: 0;}
+    20%   {opacity: 1;}
+    50% {left:25%; top:33%;}
+    80% {opacity: 1;}
+    100% {left:-500%; top:140%;opacity: 0;}
+}
+
+#gear5 {
+    z-index: 21;
+    max-width: 200%;
+    -webkit-user-drag: none;
+    position: relative;
+    animation-duration: 3.5s;
+    animation-name: gear5;
+    animation-delay: 10.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    left: -40%;
+    opacity: 0;
+}
+
+@keyframes gear5 {
+    0%   {top:200%; opacity: 1;}
+    70% {top:0%; opacity: 1;}
+    80% {top: 13%; opacity: 1;}
+    85% {top: -15%; opacity: 1;}
+    90% {top: 13%; opacity: 1;}
+    95% {top: -15%; opacity: 1;}
+    100% {top: 0%; opacity: 1;}
+}
